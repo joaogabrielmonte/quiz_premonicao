@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body.resultado {
+    background: radial-gradient(circle at center, #1a0000, #000000);
+    color: #ff6666;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    padding: 50px 20px;
+    user-select: none;
+}
+
+.jumpscare img {
+    box-shadow: 0 0 30px crimson;
+    border: 3px solid crimson;
+    border-radius: 15px;
+}
+
+.mensagem-final h1 {
+    color: crimson;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+
+    </style>
+</head>
+<body class="resultado">
+
+    <div class="jumpscare">
+        <img src="img/premonicao.png" alt="Susto" style="width:100%; max-width:400px; border-radius: 15px;">
+    </div>
+
+    <div class="mensagem-final">
+        <h1>⚠️ Você sobreviveu...</h1>
+        <p>Nem a morte... nem o destino... podem impedir que eu te ame. ❤️💀</p>
+        <p>Prepare-se, sua surpresa te aguarda...</p>
+        <a href="premio/arquivo.pdf" class="start-button" target="_blank" rel="noopener">Ver sua Surpresa</a>
+    </div>
+
+    <audio id="jumpscareAudio" src="som/jumpscare.ogg"></audio>
+
+    <script>
+        const audio = document.getElementById('jumpscareAudio');
+        const jumpscareDiv = document.querySelector('.jumpscare');
+        const mensagemFinal = document.querySelector('.mensagem-final');
+
+        // Toca o som
+        audio.play();
+
+        audio.addEventListener('ended', () => {
+            jumpscareDiv.style.display = 'none';
+            mensagemFinal.style.display = 'block';
+        });
+
+        setTimeout(() => {
+            if (jumpscareDiv.style.display !== 'none') {
+                jumpscareDiv.style.display = 'none';
+                mensagemFinal.style.display = 'block';
+            }
+        }, 7000);
+    </script>
+
+</body>
+</html>

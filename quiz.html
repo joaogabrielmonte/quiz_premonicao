@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Assombrado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <style>
+        body {
+            background: url('img/bg-dark.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Share Tech Mono', monospace;
+            color: #00ffea;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px crimson;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: crimson;
+            text-shadow: 0 0 10px red;
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+        .question p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        label:hover {
+            color: crimson;
+        }
+        .next-button, .start-button {
+            background-color: #00ffea;
+            color: black;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px #00ffea;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .next-button:hover, .start-button:hover {
+            background-color: #00b2a3;
+            box-shadow: 0 0 20px #00b2a3;
+        }
+        .question:last-child p {
+            text-align: center;
+            font-size: 1.6rem;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgm" loop>
+        <source src="som/cinematic-drone.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1>Responda... Se Tiver Coragem</h1>
+
+        <form id="quizForm">
+
+            <!-- Pergunta 1 -->
+            <div class="question active">
+                <p>1. Qual desses NÃO é um presságio clássico em 'Premonição'?</p>
+                <label><input type="radio" name="q1" value="A"> Visão de acidente</label>
+                <label><input type="radio" name="q1" value="B"> Relógio quebrando</label>
+                <label><input type="radio" name="q1" value="C"> Gato miando 3x</label>
+                <label><input type="radio" name="q1" value="D"> Sons estranhos</label>
+                <button type="button" class="next-button">Próxima</button>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="question">
+                <p>2. No filme Premonição, o que sempre antecede os acidentes?</p>
+                <label><input type="radio" name="q2" value="A"> Visão</label>
+                <label><input type="radio" name="q2" value="B"> Sonho</label>
+                <label><input type="radio" name="q2" value="C"> Pressentimento</label>
+                <label><input type="radio" name="q2" value="D"> Ligação</label>
+                <button type="button" class="next-button">Próxima</button>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question">
+                <p>3. Qual desses filmes tem uma boneca amaldiçoada?</p>
+                <label><input type="radio" name="q3" value="A"> Invocação do Mal</label>
+                <label><input type="radio" name="q3" value="B"> Atividade Paranormal</label>
+                <label><input type="radio" name="q3" value="C"> Jogos Mortais</label>
+                <label><input type="radio" name="q3" value="D"> A Morte te Dá Parabéns</label>
+                <button type="button" class="next-button">Próxima</button>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question">
+                <p>4. Qual é o nome do carro dos irmãos Winchester?</p>
+                <label><input type="radio" name="q4" value="A"> Impala</label>
+                <label><input type="radio" name="q4" value="B"> Mustang</label>
+                <label><input type="radio" name="q4" value="C"> Camaro</label>
+                <label><input type="radio" name="q4" value="D"> Charger</label>
+                <button type="button" class="next-button">Próxima</button>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="question">
+                <p>5. O que derrota fantasmas em Supernatural?</p>
+                <label><input type="radio" name="q5" value="A"> Sal</label>
+                <label><input type="radio" name="q5" value="B"> Água benta</label>
+                <label><input type="radio" name="q5" value="C"> Fogo</label>
+                <label><input type="radio" name="q5" value="D"> Luz solar</label>
+                <button type="button" class="next-button">Próxima</button>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="question">
+                <p>6. O que significa quando um corvo aparece em filmes de terror?</p>
+                <label><input type="radio" name="q6" value="A"> Sorte</label>
+                <label><input type="radio" name="q6" value="B"> Morte se aproxima</label>
+                <label><input type="radio" name="q6" value="C"> Renovação</label>
+                <label><input type="radio" name="q6" value="D"> Visita inesperada</label>
+                <button type="button" class="next-button">Próxima</button>
+            </div>
+
+            <!-- Tela final -->
+            <div class="question">
+                <p>Você está pronta... para o que vem a seguir?</p>
+                <button type="submit" class="start-button">Finalizar</button>
+            </div>
+
+        </form>
+    </div>
+
+  
+
+</body>
+</html>

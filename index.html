@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz do Amor Sobrenatural</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            background: url('img/bg-dark.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #00ffea;
+            font-family: 'Share Tech Mono', monospace;
+            overflow: hidden;
+            cursor: crosshair;
+        }
+        .container {
+            text-align: center;
+            margin-top: 15%;
+        }
+        h1.glitch {
+            font-size: 3.5rem;
+            color: #00ffea;
+            text-shadow: 0 0 10px #00ffea, 0 0 20px red;
+            animation: glitch 1s infinite;
+        }
+        .sub {
+            margin-top: -10px;
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+        a.start-button {
+            display: inline-block;
+            background-color: #00ffea;
+            color: black;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            box-shadow: 0 0 15px #00ffea;
+            transition: all 0.3s ease;
+        }
+        a.start-button:hover {
+            background-color: #00b2a3;
+            box-shadow: 0 0 25px #00b2a3;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red, -2px -2px blue; }
+            20% { text-shadow: -2px 0 red, 2px 2px blue; }
+            40% { text-shadow: 0 2px red, 0 -2px blue; }
+            60% { text-shadow: 2px -2px red, -2px 2px blue; }
+            80% { text-shadow: -2px -2px red, 2px 0 blue; }
+            100% { text-shadow: 2px 2px red, -2px -2px blue; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgm" loop>
+        <source src="som/interferencia.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1 class="glitch">⚠️ Você Está Pronta?</h1>
+        <p class="sub">Nem a morte... nem o destino... podem impedir isso...</p>
+        <a href="quiz.html" class="start-button" onclick="playAudio()">Começar o Jogo</a>
+    </div>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('bgm');
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
