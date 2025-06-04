@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Quiz do Amor Sobrenatural</title>
@@ -15,21 +16,25 @@
             overflow: hidden;
             cursor: crosshair;
         }
+
         .container {
             text-align: center;
             margin-top: 15%;
         }
+
         h1.glitch {
             font-size: 3.5rem;
             color: #00ffea;
             text-shadow: 0 0 10px #00ffea, 0 0 20px red;
             animation: glitch 1s infinite;
         }
+
         .sub {
             margin-top: -10px;
             font-size: 1.2rem;
             color: #ccc;
         }
+
         a.start-button {
             display: inline-block;
             background-color: #00ffea;
@@ -43,23 +48,43 @@
             box-shadow: 0 0 15px #00ffea;
             transition: all 0.3s ease;
         }
+
         a.start-button:hover {
             background-color: #00b2a3;
             box-shadow: 0 0 25px #00b2a3;
         }
+
         @keyframes glitch {
-            0% { text-shadow: 2px 2px red, -2px -2px blue; }
-            20% { text-shadow: -2px 0 red, 2px 2px blue; }
-            40% { text-shadow: 0 2px red, 0 -2px blue; }
-            60% { text-shadow: 2px -2px red, -2px 2px blue; }
-            80% { text-shadow: -2px -2px red, 2px 0 blue; }
-            100% { text-shadow: 2px 2px red, -2px -2px blue; }
+            0% {
+                text-shadow: 2px 2px red, -2px -2px blue;
+            }
+
+            20% {
+                text-shadow: -2px 0 red, 2px 2px blue;
+            }
+
+            40% {
+                text-shadow: 0 2px red, 0 -2px blue;
+            }
+
+            60% {
+                text-shadow: 2px -2px red, -2px 2px blue;
+            }
+
+            80% {
+                text-shadow: -2px -2px red, 2px 0 blue;
+            }
+
+            100% {
+                text-shadow: 2px 2px red, -2px -2px blue;
+            }
         }
     </style>
 </head>
+
 <body>
 
- <audio autoplay loop>
+    <audio autoplay loop>
         <source src="som/terror.mp3" type="audio/mpeg">
     </audio>
 
@@ -77,4 +102,5 @@
     </script>
 
 </body>
+
 </html>
